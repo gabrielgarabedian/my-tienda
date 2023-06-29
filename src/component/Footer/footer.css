@@ -1,0 +1,19 @@
+.footer{
+    width: 100%; 
+    background-image: url(../../assets/universo.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 8rem;
+}
+
+.creador{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: white;
+    font-style: oblique;
+    font-size: 20px;
+    padding: 15px;
+    text-decoration: none;
+    margin-top: 1rem;
+}

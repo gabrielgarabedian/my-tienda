@@ -1,0 +1,12 @@
+.cartWidget {
+    color: rgb(14, 206, 148);
+}
+
+.cartWidget :hover{
+    color: rgba(255, 251, 0, 0.918);
+}
+
+.numAzar{
+    color: aliceblue;
+    text-align: center;
+}

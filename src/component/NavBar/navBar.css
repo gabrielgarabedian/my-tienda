@@ -1,0 +1,29 @@
+.navBar{
+    width: 100%; 
+    background-color: black;
+}
+
+.barraNavegacion{
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+    padding: 20px;
+    gap: 200px;
+}
+
+.contenedorPagina{
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    font-size: 29px;
+}
+
+.hrefNav{
+    text-decoration: none;
+    color: rgb(14, 206, 148);
+    font-size: 20px;
+}
+
+.hrefli:hover {
+    color: rgba(255, 251, 0, 0.918);
+}

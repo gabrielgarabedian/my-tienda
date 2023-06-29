@@ -1,0 +1,25 @@
+.encabezado{
+    margin-top: 20px;
+    text-align: center;
+    color: azure;
+    font-size: 40px;
+}
+
+.contenedor-detalle{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    text-decoration: none;
+}
+
+.DetailList{
+    width: 80%;
+    margin-left: 150px;
+    margin-top: 35px;
+}
+
+.div-compra{
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 15px;
+}
