@@ -1,0 +1,10 @@
+.spinner{
+    height: 45vh;
+    
+}
+
+.loading{
+    color: aqua;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}

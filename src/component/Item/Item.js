@@ -16,9 +16,6 @@ const Item = ({producto})=> {
       {producto.name}
       </Typography>
       <Typography variant="body2" color="text.secondary">
-        {producto.descripcion}
-      </Typography>
-      <Typography variant="body2" color="text.secondary">
         $ {producto.precio}
       </Typography>
     </CardContent>

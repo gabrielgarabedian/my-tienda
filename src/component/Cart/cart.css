@@ -1,3 +1,26 @@
 .titulo {
+    margin-top: 60px;
     color: aliceblue;
+    height: 48vh;
+}
+
+.carritoEstado{
+    font-size: 40px;
+    font-style: oblique;
+    margin: 35px;
+}
+
+.carritoEstado2{
+    font-size: 20px;
+    font-style: normal;
+    margin: 35px;
+}
+
+.div-compra2{
+    padding: 10px;
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: 800;
+    background-color : yellowgreen;
+    border-radius: 5px;
 }

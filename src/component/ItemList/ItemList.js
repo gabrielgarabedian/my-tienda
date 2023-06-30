@@ -1,8 +1,8 @@
 import React, {useState,useEffect}from 'react';
 import { db } from "../../firebase/firebaseConfig";
 import {collection, query, getDocs,where} from "firebase/firestore";
+import Loading from '../Loading/Loading';
 import Item from '../Item/Item';
-///import { Link } from "react-router-dom";
 import "./itemList.css"
 
 /*const ItemList = () => {
@@ -45,33 +45,38 @@ import "./itemList.css"
   export default ItemList;*/
 
   /// ---------------probando una modificacion codigo----------
-
-
-  const ItemList = () => {
-    const [productos, setProductos] = useState([]);
-    const [filtroCategoria, setFiltroCategoria] = useState("");
+const ItemList = () => {
+  const [productos, setProductos] = useState([]);
+  const [filtroCategoria, setFiltroCategoria] = useState("");
+  const [loading, setLoading] = useState(true);
   
-    useEffect(() => {
-      const getProductos = async () => {
-        try {
-          let q = query(collection(db, "productos"));
-          if (filtroCategoria !== "") {
-            q = query(collection(db, "productos"), where("categoria", "==", filtroCategoria));
-          }
-          const querySnapshot = await getDocs(q);
-          const productos = [];
-          querySnapshot.forEach((producto) => {
-            productos.push({ ...producto.data(), id: producto.id });
-          });
-          setProductos(productos);
-        } catch (error) {
-          console.error("Error al obtener los productos:", error);
+  useEffect(() => {
+    const getProductos = async () => {
+      try {
+        let q = query(collection(db, "productos"));
+        if (filtroCategoria !== "") {
+          q = query(collection(db, "productos"), where("categoria", "==", filtroCategoria));
         }
-      };
+        const querySnapshot = await getDocs(q);
+        const productos = [];
+        querySnapshot.forEach((producto) => {
+          productos.push({ ...producto.data(), id: producto.id });
+        });
+        setProductos(productos);
+      } catch (error) {
+        console.error("Error al obtener los productos:", error);
+      }
+    };
   
-      getProductos();
-    }, [filtroCategoria]);
-  
+    getProductos();
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, [filtroCategoria]);
+
+  if (loading) {
+    return <Loading/>
+  }else{
     return (
       <>
         <div className="filtroCategoria">
@@ -82,7 +87,7 @@ import "./itemList.css"
             <option value="peluches">Peluches</option>
           </select>
         </div>
-  
+    
         <div className="itemList">
           {productos.map((producto) => (
             <div key={producto.id} className="productoLista">
@@ -92,7 +97,8 @@ import "./itemList.css"
         </div>
       </>
     );
-  };
+  }
+};
   
-  export default ItemList;
+export default ItemList;
 

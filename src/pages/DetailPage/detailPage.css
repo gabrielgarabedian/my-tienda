@@ -18,8 +18,25 @@
     margin-top: 35px;
 }
 
+.descripcion{
+    color: azure;
+}
+
+.des2{
+    font-style: oblique;
+    margin-top: 15px;
+    font-size: 23px;
+}
+
 .div-compra{
     padding: 15px;
     margin-top: 20px;
     font-size: 15px;
 }
+
+.contenedor-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; 
+  }

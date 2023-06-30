@@ -24,13 +24,13 @@ const Contador = () => {
         </h1>
         <div className='itemContador'>
             <div className='botonera'>
-                <button on onClick={restar} className='restar'>-</button>
+                <button onClick={restar} className='restar'>-</button>
             </div>
             <div className='botonera'>
                 <p className='cantidad'>{numero}</p>
             </div>
             <div className='botonera'>
-                <button on onClick={sumar} className='sumar'>+</button>
+                <button onClick={sumar} className='sumar'>+</button>
             </div>
         </div>
     </div>
@@ -39,3 +39,6 @@ const Contador = () => {
 }
 
 export default Contador
+
+
+ 

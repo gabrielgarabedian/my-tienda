@@ -3,9 +3,25 @@ import "./ItemListContainer.css";
 import ItemList from '../ItemList/ItemList';
 import { Link } from "react-router-dom";
 
+///const estilos = {itemList:{textAlign: "center",fontSize: "45px",color: "crimson",marginTop: "45px",},}
 
+const ItemListContainer = () => {
+  return (<>
+     <div className='itemContenedor'>
+        <ItemList/>
+     </div>
+     <div>
+      <Link to="/">
+        <button>Volver al HOME</button>
+      </Link>
+      <Link to="/contacto">
+        <button>Contacto</button>
+      </Link>
+     </div>
+  </>) 
+};
 
-const estilos = {itemList:{textAlign: "center",fontSize: "45px",color: "crimson",marginTop: "45px",},}
+export default ItemListContainer;
 
 /*const ItemListContainer = () => {
   const [productos, setProductos ] = useState([]);
@@ -51,11 +67,11 @@ const estilos = {itemList:{textAlign: "center",fontSize: "45px",color: "crimson"
   ) 
 };
 
-export default ItemListContainer;*/
+export default ItemListContainer;
 
 
 const ItemListContainer = () => {
-  /*const [productos, setProductos ] = useState([]);
+  const [productos, setProductos ] = useState([]);
   
      
   useEffect (()=>{
@@ -75,7 +91,7 @@ const ItemListContainer = () => {
         }
       };
       getProductos();
-  }, []);*/
+  }, []);
   
   return (<>
      <div className='itemContenedor'>
@@ -93,4 +109,4 @@ const ItemListContainer = () => {
   ) 
 };
 
-export default ItemListContainer;
+export default ItemListContainer;*/
