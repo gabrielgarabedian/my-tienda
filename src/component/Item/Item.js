@@ -7,7 +7,7 @@ import { CarritoContext } from '../../Context/Context';
 import Swal from 'sweetalert2';
 
 const Item = ({ producto }) => {
-   const [ setCarrito] = useContext(CarritoContext);
+   const [ carrito, setCarrito] = useContext(CarritoContext);
 
    const agregarCarrito = () => {
     setCarrito((productoAgregado) => {

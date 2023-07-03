@@ -13,6 +13,7 @@ const initialState = {
 
 const Formulario = () => {
   const [carrito, setCarrito] = useContext(CarritoContext);
+  console.log(carrito);
 
   const [values, setValues] = useState(initialState);
 
@@ -25,7 +26,7 @@ const Formulario = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    if (values.name === "" || values.lastName === ""){
+    if (values.name === "" || values.mail === ""){
       alert ("campo invalido")
     }
     else{
@@ -48,17 +49,17 @@ const Formulario = () => {
       <form onSubmit={onSubmit} className="FormContainer">
         
         <TextField className='form-nombre'
-          placeholder="Nombre"
+          placeholder="Nombre y Apellido"
           style={{ margin: 10, width: 300 ,}}
           name="name"
           value={values.name}
           onChange={handleOnChange}
         />
         <TextField
-          placeholder="Apellidos"
+          placeholder="Mail"
           style={{ margin: 10, width: 300 }}
-          name="lastName"
-          value={values.lastName}
+          name="mail"
+          value={values.mail}
           onChange={handleOnChange}
         />
         <button className='div-confirmar' type="submit">
