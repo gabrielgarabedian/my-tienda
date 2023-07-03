@@ -5,7 +5,6 @@ import {collection, query, getDocs,where, documentId} from "firebase/firestore";
 import { Link } from 'react-router-dom';
 import Item from '../../component/Item/Item';
 import "./detailPage.css"
-import Contador from '../../component/Contador/Contador';
 import Loading from '../../component/Loading/Loading';
 
 
@@ -58,24 +57,23 @@ const DetailPage = () => {
                 </div>)
             }): null}
           </div>
-          <div >
+        <div>
             {producto ? producto.map((producto)=>{
               return (
                 <div key={producto.id} className='descripcion'>
                   <h2> Descripcion del producto seleccionado:</h2>
                   <p className='des2'>{producto.descripcion}</p>
                 </div>)}): null}
-            <Contador/>
-            <button className='div-compra'>Agregar al Carrito</button>
+            <div>
+              <Link to="/tienda">
+                <button className='div-compra'>Seguir comprando</button>
+              </Link>
+              <Link to="/">
+                <button className='div-compra'>Volver al HOME</button>
+              </Link>
+            </div>
           </div>
         </div>
-    
-        <Link to="/tienda">
-          <button>Ir a la Tienda</button>
-        </Link>
-        <Link to="/">
-          <button>Volver al HOME</button>
-        </Link>
       </div>
     )
   };

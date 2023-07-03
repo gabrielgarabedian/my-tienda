@@ -1,12 +1,13 @@
 .itemList{
-    
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     text-decoration: none;
+    width: 100%;
     
 }
 
 .productoLista{
     text-decoration: none;
+    margin: 30px;
 }

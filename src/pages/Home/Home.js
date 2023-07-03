@@ -2,7 +2,6 @@ import React from "react";
 import img from "../../assets/iron.webp";
 import "./home.css"
 
-
 const HomePage =( )=>{
     return (
         <>

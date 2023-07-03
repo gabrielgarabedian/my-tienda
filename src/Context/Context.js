@@ -1,14 +1,14 @@
 import React, { useState, createContext } from "react";
-export const ProductosContext = createContext();
+export const CarritoContext = createContext();
 
-const initialState = [];
+//const initialState = [];
 
-export const ProductosProvider = ({ children }) => {
-  const [producto, setProducto] = useState([initialState]);
+export const CarritoProvider = ({ children }) => {
+  const [carrito, setCarrito] = useState([]);
 
   return (
-    <ProductosContext.Provider value={{ producto, setProducto }}>
+    <CarritoContext.Provider value={[ carrito, setCarrito ]}>
       {children}
-    </ProductosContext.Provider>
+    </CarritoContext.Provider>
   );
 };

@@ -9,16 +9,14 @@ import HomePage from './pages/Home/Home';
 import ContactoPage from './pages/Contacto/Contacto';
 import { Cart } from './component/Cart/Cart';
 import DetailPage from './pages/DetailPage/DetailPage';
-import {ProductosProvider } from "./Context/Context";
-
+import {CarritoProvider} from "./Context/Context";
 
 const App = ()=> {
   
   return (
     <>
-    <ProductosProvider>
-
-      <Router>
+    <CarritoProvider>
+    <Router>
         <div className="App">
           <Header/>
           <NavBar/>
@@ -29,12 +27,10 @@ const App = ()=> {
             <Route path="/cart" element= {<Cart/>}/>
             <Route path="/detail/:id" element= {<DetailPage/>}/>
           </Routes>
-            
-
           <Footer/>
         </div>
-      </Router>
-    </ProductosProvider>
+    </Router>
+    </CarritoProvider>
     </>
   );
 }

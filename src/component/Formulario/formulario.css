@@ -1,0 +1,32 @@
+.contenedor-form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-form{
+    color: aliceblue;
+
+    
+}
+
+.FormContainer{
+    
+    background-color: gray;
+    
+}
+
+.div-confirmar{
+    padding: 15px;
+    margin-top: 20px;
+    margin-left: 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: chartreuse;
+    
+}

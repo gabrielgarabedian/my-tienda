@@ -12,10 +12,10 @@ const ItemListContainer = () => {
      </div>
      <div>
       <Link to="/">
-        <button>Volver al HOME</button>
+        <button className='div-compra'>Volver al HOME</button>
       </Link>
       <Link to="/contacto">
-        <button>Contacto</button>
+        <button className='div-compra'>Contacto</button>
       </Link>
      </div>
   </>) 

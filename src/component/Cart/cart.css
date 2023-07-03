@@ -1,13 +1,30 @@
-.titulo {
+.central1{
     margin-top: 60px;
     color: aliceblue;
-    height: 48vh;
+    height: 52vh;
+}
+
+.central{
+    color: aliceblue;
+    
+}
+
+.titulo {
+    margin-top: 10px;
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+
+.total {
+   margin: 25px;
+   font-size: 38px;
+   color: yellow;
 }
 
 .carritoEstado{
     font-size: 40px;
     font-style: oblique;
-    margin: 35px;
+    margin-top: 5px;
 }
 
 .carritoEstado2{
@@ -23,4 +40,25 @@
     font-weight: 800;
     background-color : yellowgreen;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+.tarjetas-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px
+    
+}
+
+.div-limpiar{
+    padding: 10px;
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: 800;
+    background-color : red;
+    color: aliceblue;
+    border-radius: 5px;
+    cursor: pointer;
 }
